@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="md:col-span-1">
-            <Image src="/logo.webp" alt="Siadis Media" width={130} height={40} className="object-contain h-8 w-auto mb-4" />
+            <Image src="/logo.webp" alt="Siadis Media" width={170} height={52} className="object-contain h-11 w-auto mb-4" />
             <p className="text-white/50 text-sm leading-relaxed">
               Full-stack digital marketing agency. Every touchpoint covered.
             </p>
