@@ -37,8 +37,9 @@ export default function HomePage() {
                 Digital Marketing Agency
               </span>
               <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
-                Bring your brand<br />
-                <span className="teal-text">closer to people.</span>
+                Bring your<br />
+                <span className="teal-text">brand closer</span><br />
+                to real people.
               </h1>
               <p className="text-white/60 text-lg leading-relaxed mb-8 max-w-md">
                 10 years of expertise. Every digital touchpoint covered — from strategy and paid social to content, video, analytics and web development.
