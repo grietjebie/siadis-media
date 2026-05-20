@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const featuredServices = [
   {
@@ -55,12 +56,14 @@ export default function HomePage() {
             </div>
 
             <div className="hidden md:flex justify-center items-center relative">
-              <div className="w-80 h-80 rounded-3xl bg-[#111] border border-white/10 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 teal-gradient opacity-10" />
-                <div className="text-center relative z-10">
-                  <div className="text-8xl font-bold teal-text mb-2">#</div>
-                  <p className="text-white/40 text-sm tracking-widest uppercase">Siadis Media</p>
-                </div>
+              <div className="w-80 h-80 rounded-3xl border border-white/10 relative overflow-hidden">
+                <Image
+                  src="/daniel-siadis.jpg"
+                  alt="Daniel Siadis"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
               <div className="absolute top-4 -right-4 bg-[#111] border border-white/10 rounded-2xl px-4 py-3">
                 <span className="teal-text font-bold text-lg">8500%</span>
