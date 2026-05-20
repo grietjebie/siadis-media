@@ -20,7 +20,9 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-white/10">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/logo.png" alt="Siadis Media" width={140} height={40} className="object-contain h-8 w-auto" />
+          <div className="bg-white rounded-xl px-3 py-1.5">
+            <Image src="/logo.png" alt="Siadis Media" width={120} height={34} className="object-contain h-6 w-auto" />
+          </div>
         </Link>
 
         {/* Desktop */}
