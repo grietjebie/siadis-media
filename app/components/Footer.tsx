@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="md:col-span-1">
-            <Image src="/logo.png" alt="Siadis Media" width={130} height={40} className="object-contain h-8 w-auto mb-4" style={{ filter: 'invert(1) hue-rotate(180deg)' }} />
+            <Image src="/logo.png" alt="Siadis Media" width={130} height={40} className="object-contain h-8 w-auto mb-4" style={{ filter: 'brightness(0) invert(1)' }} />
             <p className="text-white/50 text-sm leading-relaxed">
               Full-stack digital marketing agency. Every touchpoint covered.
             </p>
