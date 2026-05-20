@@ -38,8 +38,8 @@ export default function HomePage() {
               </span>
               <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
                 Bring your<br />
-                <span className="teal-text">brand closer</span><br />
-                to real people.
+                brand <span className="teal-text">closer</span><br />
+                <span className="teal-text">to real people.</span>
               </h1>
               <p className="text-white/60 text-lg leading-relaxed mb-8 max-w-md">
                 10 years of expertise. Every digital touchpoint covered — from strategy and paid social to content, video, analytics and web development.
