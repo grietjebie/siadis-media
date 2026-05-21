@@ -111,7 +111,7 @@ export default function HomePage() {
             {featuredServices.map((s, i) => (
               <div key={i} className="bg-[#111] border border-white/10 rounded-2xl p-8 hover:border-white/20 transition group">
                 <div className="w-16 h-16 rounded-2xl teal-gradient flex items-center justify-center mb-6 group-hover:scale-110 transition overflow-hidden">
-                  <Image src={s.icon} alt={s.title} width={48} height={48} className="object-contain" />
+                  <Image src={s.icon} alt={s.title} width={56} height={56} className="object-contain" />
                 </div>
                 <h3 className="text-lg font-bold mb-3">{s.title}</h3>
                 <p className="text-white/50 text-sm leading-relaxed mb-6">{s.desc}</p>

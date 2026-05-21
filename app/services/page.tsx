@@ -88,7 +88,7 @@ export default function ServicesPage() {
               <div key={i} className="bg-[#111] border border-white/10 rounded-2xl p-8 hover:border-white/20 transition group relative">
                 <div className="flex items-start gap-5">
                   <div className="w-16 h-16 rounded-2xl teal-gradient flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition overflow-hidden">
-                    <Image src={s.icon} alt={s.title} width={48} height={48} className="object-contain" />
+                    <Image src={s.icon} alt={s.title} width={56} height={56} className="object-contain" />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-1">{s.title}</h3>
