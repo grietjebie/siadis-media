@@ -3,17 +3,17 @@ import Image from 'next/image'
 
 const featuredServices = [
   {
-    icon: '📊',
+    icon: '/services-icons/campaign-strategy.webp',
     title: 'Campaign Strategy',
     desc: 'No cookie-cutter campaigns. We dig into your goals and map out a strategy with the KPIs that actually matter.',
   },
   {
-    icon: '📱',
+    icon: '/services-icons/social-media-advertising.webp',
     title: 'Social Media Advertising',
     desc: 'Facebook, Instagram, TikTok, Snapchat — paid social that actually converts, synced with your product feed.',
   },
   {
-    icon: '🎯',
+    icon: '/services-icons/retargeting.webp',
     title: 'Retargeting',
     desc: "Someone visited but didn't convert? We re-engage them with smart, targeted ads that nudge them toward buying.",
   },
@@ -110,8 +110,8 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-6">
             {featuredServices.map((s, i) => (
               <div key={i} className="bg-[#111] border border-white/10 rounded-2xl p-8 hover:border-white/20 transition group">
-                <div className="w-14 h-14 rounded-2xl teal-gradient flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
-                  {s.icon}
+                <div className="w-14 h-14 rounded-2xl teal-gradient flex items-center justify-center mb-6 group-hover:scale-110 transition overflow-hidden">
+                  <Image src={s.icon} alt={s.title} width={36} height={36} className="object-contain" />
                 </div>
                 <h3 className="text-lg font-bold mb-3">{s.title}</h3>
                 <p className="text-white/50 text-sm leading-relaxed mb-6">{s.desc}</p>
