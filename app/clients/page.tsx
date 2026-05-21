@@ -58,12 +58,12 @@ export default async function ClientsPage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {clients.map((c: any) => {
-              const logoSrc = c.logo?.asset ? urlFor(c.logo).width(120).height(60).url() : null
+              const logoSrc = c.logo?.asset ? urlFor(c.logo).width(300).url() : null
               return (
                 <div key={c._id} className="bg-[#111] border border-white/10 rounded-2xl p-6 hover:border-white/25 transition group flex flex-col items-center justify-center text-center min-h-[120px]">
                   {logoSrc ? (
-                    <div className="h-12 flex items-center justify-center mb-3">
-                      <Image src={logoSrc} alt={c.name} width={120} height={48} className="object-contain max-h-12" />
+                    <div className="w-full flex items-center justify-center mb-3 px-2">
+                      <Image src={logoSrc} alt={c.name} width={160} height={80} className="object-contain max-h-16 w-auto" />
                     </div>
                   ) : (
                     <div className="w-10 h-10 rounded-xl teal-gradient flex items-center justify-center text-[#0a0a0a] font-bold text-sm mb-3 group-hover:scale-110 transition">
