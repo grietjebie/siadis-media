@@ -1,32 +1,32 @@
 import Link from 'next/link'
+import { getAbout } from '@/lib/sanity'
 
-const milestones = [
-  { year: '2014', title: 'First campaigns', desc: 'Started running paid social for local businesses — discovered a passion for data-driven marketing.' },
-  { year: '2017', title: 'Agency experience', desc: 'Worked in-house at a mid-size Amsterdam agency managing multi-channel campaigns for international brands.' },
-  { year: '2019', title: 'Freelance leap', desc: 'Went independent, building a client portfolio across e-commerce, hospitality, and fashion.' },
-  { year: '2020', title: 'Siadis Media founded', desc: 'Launched the agency with a full-stack approach — because piecemeal marketing leaves money on the table.' },
-  { year: 'Now', title: '250+ campaigns later', desc: 'Trusted by brands across Europe. Still hungry, still learning, still delivering results.' },
-]
+const fallback = {
+  bio1: "I spent a decade mastering every channel, every tool, and every trend in digital marketing before launching Siadis Media in 2020. Not because I wanted to build an agency — but because I got tired of watching great brands settle for mediocre results.",
+  bio2: "Based in The Hague, I work with brands across Europe — from fast-moving e-commerce brands to established B2B players. My edge? I don't silo. Strategy, paid social, content, video, analytics, web — they're all part of the same machine, and I build them to work together.",
+  bio3: "Consumer behavior is evolving at lightning speed. My job is to make sure your business is always one step ahead.",
+  values: [
+    { title: 'Results over vanity', desc: "Impressions look great in a deck. We care about what actually moves your business forward — revenue, leads, retention." },
+    { title: 'Full-stack thinking', desc: "Strategy, creative, tech, analytics — all in-house, all connected. No handoff gaps, no finger-pointing." },
+    { title: 'Radical transparency', desc: "You'll always know what we're doing, why we're doing it, and what it's costing. No black boxes." },
+  ],
+  milestones: [
+    { year: '2014', title: 'First campaigns', desc: 'Started running paid social for local businesses — discovered a passion for data-driven marketing.' },
+    { year: '2017', title: 'Agency experience', desc: 'Worked in-house at a mid-size Amsterdam agency managing multi-channel campaigns for international brands.' },
+    { year: '2019', title: 'Freelance leap', desc: 'Went independent, building a client portfolio across e-commerce, hospitality, and fashion.' },
+    { year: '2020', title: 'Siadis Media founded', desc: 'Launched the agency with a full-stack approach — because piecemeal marketing leaves money on the table.' },
+    { year: 'Now', title: '250+ campaigns later', desc: 'Trusted by brands across Europe. Still hungry, still learning, still delivering results.' },
+  ],
+}
 
-const values = [
-  {
-    title: 'Results over vanity',
-    desc: "Impressions look great in a deck. We care about what actually moves your business forward — revenue, leads, retention.",
-  },
-  {
-    title: 'Full-stack thinking',
-    desc: "Strategy, creative, tech, analytics — all in-house, all connected. No handoff gaps, no finger-pointing.",
-  },
-  {
-    title: 'Radical transparency',
-    desc: "You'll always know what we're doing, why we're doing it, and what it's costing. No black boxes.",
-  },
-]
+export default async function AboutPage() {
+  const sanityAbout = await getAbout()
+  const data = sanityAbout || fallback
+  const values = data.values?.length ? data.values : fallback.values
+  const milestones = data.milestones?.length ? data.milestones : fallback.milestones
 
-export default function AboutPage() {
   return (
     <>
-      {/* Header */}
       <section className="pt-32 pb-16 bg-[#111]">
         <div className="max-w-6xl mx-auto px-6">
           <p className="text-xs tracking-widest uppercase text-white/40 mb-4">The story</p>
@@ -39,11 +39,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Founder section */}
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
-            {/* Avatar placeholder */}
             <div className="flex justify-center">
               <div className="relative">
                 <div className="w-72 h-72 rounded-3xl bg-[#111] border border-white/10 flex items-center justify-center overflow-hidden">
@@ -60,7 +58,6 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
-
             <div>
               <p className="text-xs tracking-widest uppercase text-white/40 mb-3">The founder</p>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -68,30 +65,19 @@ export default function AboutPage() {
                 <span className="teal-text">I live for this stuff.</span>
               </h2>
               <div className="space-y-4 text-white/60 leading-relaxed">
-                <p>
-                  I spent a decade mastering every channel, every tool, and every trend in digital marketing before launching Siadis Media in 2020. Not because I wanted to build an agency — but because I got tired of watching great brands settle for mediocre results.
-                </p>
-                <p>
-                  Based in The Hague, I work with brands across Europe — from fast-moving e-commerce brands to established B2B players. My edge? I don&apos;t silo. Strategy, paid social, content, video, analytics, web — they&apos;re all part of the same machine, and I build them to work together.
-                </p>
-                <p>
-                  Consumer behavior is evolving at lightning speed. My job is to make sure your business is always one step ahead.
-                </p>
+                {[data.bio1 || fallback.bio1, data.bio2 || fallback.bio2, data.bio3 || fallback.bio3].map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
               </div>
               <div className="flex gap-4 mt-8">
-                <Link href="/contact" className="px-7 py-3 rounded-full teal-gradient text-[#0a0a0a] font-semibold text-sm hover:opacity-90 transition">
-                  Work with me
-                </Link>
-                <Link href="/clients" className="px-7 py-3 rounded-full border border-white/20 text-sm hover:border-white/50 transition">
-                  See clients
-                </Link>
+                <Link href="/contact" className="px-7 py-3 rounded-full teal-gradient text-[#0a0a0a] font-semibold text-sm hover:opacity-90 transition">Work with me</Link>
+                <Link href="/clients" className="px-7 py-3 rounded-full border border-white/20 text-sm hover:border-white/50 transition">See clients</Link>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values */}
       <section className="py-20 bg-[#111]">
         <div className="max-w-6xl mx-auto px-6">
           <p className="text-xs tracking-widest uppercase text-white/40 mb-3">How we operate</p>
@@ -99,11 +85,9 @@ export default function AboutPage() {
             Three things we&apos;ll never <span className="teal-text">compromise on</span>
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {values.map((v, i) => (
+            {values.map((v: any, i: number) => (
               <div key={i} className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 hover:border-white/20 transition">
-                <div className="w-10 h-10 rounded-xl teal-gradient flex items-center justify-center text-[#0a0a0a] font-bold text-lg mb-5">
-                  {i + 1}
-                </div>
+                <div className="w-10 h-10 rounded-xl teal-gradient flex items-center justify-center text-[#0a0a0a] font-bold text-lg mb-5">{i + 1}</div>
                 <h3 className="font-bold text-lg mb-3">{v.title}</h3>
                 <p className="text-white/50 text-sm leading-relaxed">{v.desc}</p>
               </div>
@@ -112,21 +96,16 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Timeline */}
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-6">
           <p className="text-xs tracking-widest uppercase text-white/40 mb-3">The journey</p>
           <h2 className="text-3xl font-bold mb-12">How we got here</h2>
           <div className="space-y-0">
-            {milestones.map((m, i) => (
+            {milestones.map((m: any, i: number) => (
               <div key={i} className="flex gap-8 group">
                 <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-full teal-gradient flex items-center justify-center text-[#0a0a0a] font-bold text-xs flex-shrink-0">
-                    {m.year}
-                  </div>
-                  {i < milestones.length - 1 && (
-                    <div className="w-px flex-1 bg-white/10 my-2" />
-                  )}
+                  <div className="w-12 h-12 rounded-full teal-gradient flex items-center justify-center text-[#0a0a0a] font-bold text-xs flex-shrink-0">{m.year}</div>
+                  {i < milestones.length - 1 && <div className="w-px flex-1 bg-white/10 my-2" />}
                 </div>
                 <div className="pb-10">
                   <h3 className="font-bold text-lg mb-1">{m.title}</h3>
@@ -138,12 +117,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="py-20 bg-[#111]">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to work together?
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to work together?</h2>
           <p className="text-white/50 mb-8">Let&apos;s build something worth talking about.</p>
           <Link href="/contact" className="px-8 py-3.5 rounded-full teal-gradient text-[#0a0a0a] font-semibold hover:opacity-90 transition inline-block">
             Start a conversation
