@@ -21,8 +21,8 @@ const featuredServices = [
 
 const stats = [
   { value: '250+', label: 'Campaigns' },
-  { value: '15M+', label: 'Impressions' },
-  { value: '5-10x', label: 'ROAS' },
+  { value: '25M+', label: 'Impressions' },
+  { value: '6+', label: 'ROAS' },
   { value: '6%', label: 'Avg CTR' },
 ]
 
@@ -65,12 +65,12 @@ export default function HomePage() {
                   priority
                 />
               </div>
-              <div className="absolute top-4 -right-4 bg-[#111] border border-white/10 rounded-2xl px-4 py-3">
-                <span className="teal-text font-bold text-lg">5-10x</span>
+              <div className="absolute top-4 right-10 bg-[#111] border border-white/10 rounded-2xl px-4 py-3">
+                <span className="teal-text font-bold text-lg">6+</span>
                 <span className="text-white/50 ml-2 text-xs">ROAS</span>
               </div>
               <div className="absolute bottom-8 -left-4 bg-[#111] border border-white/10 rounded-2xl px-4 py-3">
-                <span className="teal-text font-bold text-lg">15M+</span>
+                <span className="teal-text font-bold text-lg">25M+</span>
                 <span className="text-white/50 ml-2 text-xs">Impressions</span>
               </div>
             </div>
