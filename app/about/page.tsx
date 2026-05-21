@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import { getAbout } from '@/lib/sanity'
 
+export const revalidate = 60
+
 const fallback = {
   bio1: "I spent a decade mastering every channel, every tool, and every trend in digital marketing before launching Siadis Media in 2020. Not because I wanted to build an agency — but because I got tired of watching great brands settle for mediocre results.",
   bio2: "Based in The Hague, I work with brands across Europe — from fast-moving e-commerce brands to established B2B players. My edge? I don't silo. Strategy, paid social, content, video, analytics, web — they're all part of the same machine, and I build them to work together.",

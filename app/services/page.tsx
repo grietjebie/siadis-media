@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { getServices } from '@/lib/sanity'
-import { urlFor } from '@/lib/sanity'
+import { getServices, urlFor } from '@/lib/sanity'
+
+export const revalidate = 60
 
 const fallbackServices = [
   { _id: '1', icon: '/services-icons/campaign-strategy.webp', title: 'Campaign Strategy', tagline: "Let's build your game plan.", description: "No cookie-cutter campaigns here. We dig into your goals — whether that's driving traffic, boosting conversions, or owning your niche — and map out a strategy with the KPIs that actually matter to your business." },

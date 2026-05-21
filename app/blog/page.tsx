@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import { getPosts, urlFor } from '@/lib/sanity'
 
+export const revalidate = 60
+
 const fallbackPosts = [
   { _id: '1', slug: { current: '#' }, category: 'Paid Advertising', title: 'ROAS vs CPA: Which Metric Actually Matters for Your Campaign?', excerpt: "Everyone chases ROAS, but for many businesses it's the wrong number to optimize for. Here's how to pick the metric that actually aligns with your bottom line.", publishedAt: '2026-05-12', readTime: '5 min read' },
   { _id: '2', slug: { current: '#' }, category: 'Social Media', title: 'TikTok Ads in 2026: What Still Works and What to Stop Doing', excerpt: "The platform has matured. The spray-and-pray approach is dead. Here's the TikTok ads playbook that's actually moving the needle for e-commerce brands right now.", publishedAt: '2026-04-28', readTime: '7 min read' },

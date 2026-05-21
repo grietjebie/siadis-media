@@ -2,6 +2,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { getClients, urlFor } from '@/lib/sanity'
 
+export const revalidate = 60
+
 const fallbackClients = [
   { _id: '1', name: 'Holland Watch Group', sector: 'Luxury Retail' },
   { _id: '2', name: 'MIT', sector: 'Education' },

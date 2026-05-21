@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import { getTestimonials } from '@/lib/sanity'
 
+export const revalidate = 60
+
 const fallbackTestimonials = [
   { _id: '1', quote: "Siadis Media transformed our Facebook and Instagram presence. Our ROAS went from 3x to over 12x in just four months. Daniel genuinely understands the fashion customer — and it shows in every ad.", name: 'Sophie van der Berg', role: 'CMO', company: 'Marlies Dekkers', sector: 'Fashion' },
   { _id: '2', quote: "We needed a team that could handle everything — strategy, paid ads, email, and analytics — without us having to babysit. Siadis Media delivered exactly that. Finally, an agency that feels like a real partner.", name: 'Thomas Groen', role: 'Head of Marketing', company: 'Holland Watch Group', sector: 'Luxury Retail' },
