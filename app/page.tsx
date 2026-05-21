@@ -58,8 +58,8 @@ export default function HomePage() {
             <div className="hidden md:flex justify-center items-center relative">
               <div className="w-80 h-80 rounded-3xl border border-white/10 relative overflow-hidden">
                 <Image
-                  src="/daniel-siadis.jpg"
-                  alt="Daniel Siadis"
+                  src="/interacting.jpg"
+                  alt="Digital marketing interaction"
                   fill
                   className="object-cover"
                   priority
