@@ -70,8 +70,8 @@ export default async function ClientsPage() {
                       {c.name.charAt(0)}
                     </div>
                   )}
-                  <p className="font-semibold text-sm leading-snug mb-1">{c.name}</p>
-                  <p className="text-white/30 text-xs">{c.sector}</p>
+                  {!logoSrc && <p className="font-semibold text-sm leading-snug mb-1">{c.name}</p>}
+                  {!logoSrc && <p className="text-white/30 text-xs">{c.sector}</p>}
                 </div>
               )
             })}
