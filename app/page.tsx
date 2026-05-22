@@ -136,7 +136,7 @@ export default function HomePage() {
               <p className="text-xs tracking-widest uppercase text-white/40 mb-3">About</p>
               <h2 className="text-4xl font-bold mb-6">
                 The thing about us is<br />
-                <span className="teal-text">we think big, huge</span>
+                <span className="teal-text">we think big.</span>
               </h2>
               <p className="text-white/60 leading-relaxed mb-6">
                 I spent 10 years mastering the digital marketing game before launching Siadis Media in 2020 — built around one idea: your brand deserves a full-stack approach.
