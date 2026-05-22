@@ -30,7 +30,7 @@ export default function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="min-h-screen flex items-start md:items-center pt-20">
+      <section className="md:min-h-screen flex items-start md:items-center pt-20">
         <div className="max-w-6xl mx-auto px-6 w-full">
           <div className="grid md:grid-cols-2 gap-12 items-center py-10 md:py-20">
             <div>
@@ -97,9 +97,9 @@ export default function HomePage() {
       </section>
 
       {/* FEATURED SERVICES */}
-      <section className="py-24">
+      <section className="py-12 md:py-24">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-14 gap-4">
             <div>
               <p className="text-xs tracking-widest uppercase text-white/40 mb-3">What we do</p>
               <h2 className="text-4xl font-bold">
@@ -129,7 +129,7 @@ export default function HomePage() {
       </section>
 
       {/* ABOUT SNIPPET */}
-      <section className="py-24 bg-[#111]">
+      <section className="py-12 md:py-24 bg-[#111]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
@@ -173,7 +173,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24">
+      <section className="py-12 md:py-24">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Ready to <span className="teal-text">level up?</span>
