@@ -41,9 +41,9 @@ export default async function ClientsPage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-3 gap-6 text-center">
             {[
-              { value: '250+', label: 'Campaigns run' },
+              { value: '300+', label: 'Campaigns run' },
               { value: '25M+', label: 'Impressions delivered' },
-              { value: '6+', label: 'Peak ROAS achieved' },
+              { value: '8+', label: 'Peak ROAS achieved' },
             ].map(s => (
               <div key={s.label}>
                 <div className="text-3xl md:text-4xl font-bold teal-text mb-1">{s.value}</div>
