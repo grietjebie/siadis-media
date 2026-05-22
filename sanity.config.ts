@@ -3,8 +3,6 @@ import { structureTool } from 'sanity/structure'
 import { visionTool } from '@sanity/vision'
 import { schemaTypes } from './sanity/schemas'
 
-const singletons = new Set(['about', 'siteSettings'])
-
 export default defineConfig({
   name: 'siadis-media',
   title: 'Siadis Media',
