@@ -4,9 +4,9 @@ import { getAbout } from '@/lib/sanity'
 export const revalidate = 60
 
 const fallback = {
-  bio1: "I spent a decade mastering every channel, every tool, and every trend in digital marketing before launching Siadis Media in 2020. Not because I wanted to build an agency — but because I got tired of watching great brands settle for mediocre results.",
-  bio2: "Based in The Hague, I work with brands across Europe — from fast-moving e-commerce brands to established B2B players. My edge? I don't silo. Strategy, paid social, content, video, analytics, web — they're all part of the same machine, and I build them to work together.",
-  bio3: "Consumer behavior is evolving at lightning speed. My job is to make sure your business is always one step ahead.",
+  bio1: "I spent 10 years mastering the digital marketing game before launching Siadis Media in 2020 — and I built it around one idea: your brand deserves a full-stack approach.",
+  bio2: "From campaign strategy and paid social to retargeting, email, content, video ads, display advertising, analytics, web development, and customer service — we've got every touchpoint covered.",
+  bio3: "Consumer behavior is evolving at lightning speed, and we're here to make sure your business is always one step ahead. Ready to level up? Drop me an email or let's jump on a video call.",
   values: [
     { title: 'Results over vanity', desc: "Impressions look great in a deck. We care about what actually moves your business forward — revenue, leads, retention." },
     { title: 'Full-stack thinking', desc: "Strategy, creative, tech, analytics — all in-house, all connected. No handoff gaps, no finger-pointing." },
@@ -56,7 +56,7 @@ export default async function AboutPage() {
                 </div>
                 <div className="absolute -bottom-4 -right-4 bg-[#111] border border-white/10 rounded-2xl px-5 py-3 text-center">
                   <div className="teal-text font-bold text-xl">10+</div>
-                  <div className="text-white/40 text-xs">Years exp.</div>
+                  <div className="text-white/40 text-xs">Years XP</div>
                 </div>
               </div>
             </div>
