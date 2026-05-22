@@ -55,8 +55,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="hidden md:flex justify-center items-center relative">
-              <div className="w-80 h-80 rounded-3xl border border-white/10 relative overflow-hidden">
+            <div className="flex justify-center items-center relative">
+              <div className="w-72 h-72 md:w-80 md:h-80 rounded-3xl border border-white/10 relative overflow-hidden">
                 <Image
                   src="/interacting.jpg"
                   alt="Digital marketing interaction"
