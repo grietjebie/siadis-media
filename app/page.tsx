@@ -20,9 +20,9 @@ const featuredServices = [
 ]
 
 const stats = [
-  { value: '250+', label: 'Campaigns' },
+  { value: '300+', label: 'Campaigns' },
   { value: '25M+', label: 'Impressions' },
-  { value: '6+', label: 'ROAS' },
+  { value: '8+', label: 'ROAS' },
   { value: '6%', label: 'Avg CTR' },
 ]
 
@@ -66,12 +66,16 @@ export default function HomePage() {
                 />
               </div>
               <div className="absolute top-4 right-10 bg-[#111] border border-white/10 rounded-2xl px-4 py-3">
-                <span className="teal-text font-bold text-lg">6+</span>
+                <span className="teal-text font-bold text-lg">8+</span>
                 <span className="text-white/50 ml-2 text-xs">ROAS</span>
               </div>
               <div className="absolute bottom-8 -left-4 bg-[#111] border border-white/10 rounded-2xl px-4 py-3">
                 <span className="teal-text font-bold text-lg">25M+</span>
                 <span className="text-white/50 ml-2 text-xs">Impressions</span>
+              </div>
+              <div className="absolute bottom-8 -right-4 bg-[#111] border border-white/10 rounded-2xl px-4 py-3">
+                <span className="teal-text font-bold text-lg">300+</span>
+                <span className="text-white/50 ml-2 text-xs">Campaigns</span>
               </div>
             </div>
           </div>
