@@ -30,9 +30,9 @@ export default function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="min-h-screen flex items-center pt-20">
+      <section className="min-h-screen flex items-start md:items-center pt-20">
         <div className="max-w-6xl mx-auto px-6 w-full">
-          <div className="grid md:grid-cols-2 gap-12 items-center py-20">
+          <div className="grid md:grid-cols-2 gap-12 items-center py-10 md:py-20">
             <div>
               <span className="inline-block text-xs tracking-widest uppercase mb-6 px-3 py-1 rounded-full border border-white/20 text-white/50">
                 Digital Marketing Agency
