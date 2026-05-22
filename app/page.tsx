@@ -3,9 +3,9 @@ import Image from 'next/image'
 
 const featuredServices = [
   {
-    icon: '/services-icons/campaign-strategy.webp',
-    title: 'Campaign Strategy',
-    desc: 'No cookie-cutter campaigns. We dig into your goals and map out a strategy with the KPIs that actually matter.',
+    icon: '/services-icons/analytics.webp',
+    title: 'Analytics',
+    desc: 'Data that actually tells a story. We track, interpret, and act on the metrics that move your business forward.',
   },
   {
     icon: '/services-icons/social-media-advertising.webp',
@@ -13,9 +13,14 @@ const featuredServices = [
     desc: 'Facebook, Instagram, TikTok, Snapchat — paid social that actually converts, synced with your product feed.',
   },
   {
-    icon: '/services-icons/retargeting.webp',
-    title: 'Retargeting',
-    desc: "Someone visited but didn't convert? We re-engage them with smart, targeted ads that nudge them toward buying.",
+    icon: '/services-icons/campaign-strategy.webp',
+    title: 'Campaign Strategy',
+    desc: 'No cookie-cutter campaigns. We dig into your goals and map out a strategy with the KPIs that actually matter.',
+  },
+  {
+    icon: '/services-icons/web-development.webp',
+    title: 'Web Development',
+    desc: 'Fast, conversion-optimised websites built to support your marketing — not slow it down.',
   },
 ]
 
@@ -111,7 +116,7 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {featuredServices.map((s, i) => (
               <div key={i} className="bg-[#111] border border-white/10 rounded-2xl p-8 hover:border-white/20 transition group">
                 <div className="w-16 h-16 rounded-2xl teal-gradient flex items-center justify-center mb-6 group-hover:scale-110 transition overflow-hidden">
