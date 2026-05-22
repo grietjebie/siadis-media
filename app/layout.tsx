@@ -9,10 +9,7 @@ const inter = Inter({ subsets: ["latin"], display: "swap" });
 export const metadata: Metadata = {
   title: "Siadis Media — Digital Marketing Agency",
   description: "Full-stack digital marketing agency. Campaign strategy, paid social, retargeting, email, content, video, analytics, web development and more.",
-  icons: {
-    icon: '/siadismedia-icon.png',
-    apple: '/siadismedia-icon.png',
-  },
+
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
