@@ -116,7 +116,7 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {featuredServices.map((s, i) => (
               <div key={i} className="bg-[#111] border border-white/10 rounded-2xl p-8 hover:border-white/20 transition group">
                 <div className="w-16 h-16 rounded-2xl teal-gradient flex items-center justify-center mb-6 group-hover:scale-110 transition overflow-hidden">
