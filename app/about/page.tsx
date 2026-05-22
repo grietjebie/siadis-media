@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { getAbout } from '@/lib/sanity'
 
 export const revalidate = 60
@@ -46,13 +47,8 @@ export default async function AboutPage() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="flex justify-center">
               <div className="relative">
-                <div className="w-72 h-72 rounded-3xl bg-[#111] border border-white/10 flex items-center justify-center overflow-hidden">
-                  <div className="absolute inset-0 teal-gradient opacity-5" />
-                  <div className="text-center relative z-10">
-                    <div className="w-24 h-24 rounded-full teal-gradient flex items-center justify-center text-3xl font-bold text-[#0a0a0a] mx-auto mb-4">DS</div>
-                    <p className="font-semibold">Daniel Siadis</p>
-                    <p className="text-white/40 text-sm">Founder & Lead Strategist</p>
-                  </div>
+                <div className="w-72 h-72 rounded-3xl border border-white/10 overflow-hidden relative">
+                  <Image src="/daniel-siadis.jpg" alt="Daniel Siadis" fill className="object-cover" />
                 </div>
                 <div className="absolute -bottom-4 -right-4 bg-[#111] border border-white/10 rounded-2xl px-5 py-3 text-center">
                   <div className="teal-text font-bold text-xl">10+</div>
