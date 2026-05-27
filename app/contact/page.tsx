@@ -100,7 +100,7 @@ export default function ContactPage() {
               {status === 'success' ? (
                 <div className="bg-[#111] border border-white/10 rounded-2xl p-10 text-center">
                   <div className="w-16 h-16 rounded-full teal-gradient flex items-center justify-center text-2xl mx-auto mb-4">✓</div>
-                  <h3 className="text-xl font-bold mb-2">Thank you for your enquiry.</h3>
+                  <h3 className="text-xl font-bold mb-2">Thank you for getting in touch.</h3>
                   <p className="text-white/50 text-sm">We&apos;ve received your message and will be in touch within 24 hours.</p>
                 </div>
               ) : (
