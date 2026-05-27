@@ -18,7 +18,7 @@ const fallback = {
     { year: '2017', title: 'Agency experience', desc: 'Worked in-house at a mid-size Amsterdam agency managing multi-channel campaigns for international brands.' },
     { year: '2019', title: 'Freelance leap', desc: 'Went independent, building a client portfolio across e-commerce, hospitality, and fashion.' },
     { year: '2020', title: 'Siadis Media founded', desc: 'Launched the agency with a full-stack approach — because piecemeal marketing leaves money on the table.' },
-    { year: 'Now', title: '250+ campaigns later', desc: 'Trusted by brands across Europe. Still hungry, still learning, still delivering results.' },
+    { year: 'Now', title: '300+ campaigns later', desc: 'Trusted by brands across Europe and Asia. Still hungry, still learning, still delivering results.' },
   ],
 }
 
