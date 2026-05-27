@@ -13,7 +13,7 @@ export async function POST(req: Request) {
     await Promise.all([
       // Internal notification to Daniel
       resend.emails.send({
-        from: 'Siadis Media <noreply@siadismedia.com>',
+        from: 'Siadis Media <onboarding@resend.dev>',
         to: 'siadismedia@gmail.com',
         subject: `New contact form submission from ${name}`,
         html: `
@@ -34,7 +34,7 @@ export async function POST(req: Request) {
       }),
       // Confirmation to the sender
       resend.emails.send({
-        from: 'Daniel Siadis <noreply@siadismedia.com>',
+        from: 'Daniel Siadis <onboarding@resend.dev>',
         to: email,
         subject: "Got your message — I'll be in touch shortly",
         html: `
